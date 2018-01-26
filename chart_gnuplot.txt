@@ -1,4 +1,4 @@
-set multiplot
+set multiplot layout 3,1
 
 set xrange[0:3]
 unset yrange

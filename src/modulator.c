@@ -169,10 +169,13 @@ int main(void) {
 			phase += dphase_inc;
 		}
 
+		deltaAngle_rad = 2 * PI
+				* (phase_revs + (double) phase / (1 << 16) / (1 << 16))
+				- rotorAngle;
+
+
+
 		if ((i % 400) == 0) {
-			deltaAngle_rad = 2 * PI
-					* (phase_revs + (double) phase / (1 << 16) / (1 << 16))
-					- rotorAngle;
 			// printf("%d %d %d\n", sineU_mod, sineU_mod, sineU_mod);
 			// fprintf(data_file, " %f %d %d %d\n", i / FREQ, sineddpmU, sineddpmV,
 			// sineddpmW);
