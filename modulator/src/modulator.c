@@ -33,6 +33,8 @@
 #define U_VECT (0.0 / 3 * 3.14159)
 #define V_VECT (2.0 / 3 * 3.14159)
 #define W_VECT (4.0 / 3 * 3.14159)
+#define FILE_PATH1 "C:\\Users\\MUNARID\\Desktop\\data.txt"
+#define FILE_PATH2 "data.txt"
 
 int main(void) {
   // puts("Hi"); /* prints Hi */
@@ -76,7 +78,7 @@ int main(void) {
   printf("%d\n", sizeof(unsigned short));
   printf("%d\n", sizeof(unsigned char));
 
-  data_file = fopen("C:\\Users\\MUNARID\\Desktop\\data.txt", "w+");
+  data_file = fopen(FILE_PATH2, "w+");
 
   for (i = 0; i < SIM_TIME * FREQ; i++) {
     sineU_ix = phase >> 22;
